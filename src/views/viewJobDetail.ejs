@@ -1,0 +1,107 @@
+<img src="/images/bgjv.jpg" alt="bgimage" width="100%" height="280px">
+
+
+
+<div class="bodyy">
+
+    <div class="job-containerr">
+        <% if(message){ %>
+            <p style="color: green; font-size: 1.3rem;">
+                <%=message%>
+            </p>
+            <% } %>
+                <% if(comp){ %>
+                    <h2 class="job-titlee">
+                        <%=comp.role%> opportunity in <%=comp.location%> at <%=comp.company%>
+                    </h2>
+
+                    <div class="job-detailss">
+                        <h3>
+                            <%=comp.company %>
+                                <%if(isLoggedIn){%>
+                                    <a href="/update/<%=comp.id%>"><span><i
+                                                class="fa-solid fa-pen-to-square"></i></span></a>
+                                    <a href="/delete/<%=comp.id%>"><span><i class="fa-solid fa-trash"></i></span></a>
+                                    <%}%>
+                        </h3>
+                        <p>Tech: <%=comp.role %>
+                        </p>
+
+                        <div class="job-infoo">
+                            <p><span class="iconn">📍</span>
+                                <%=comp.location %>
+                            </p>
+                            <p><span class="iconn">💰</span>
+                                <%=comp.salary %>
+                            </p>
+                            <p><span class="iconn">⏰</span> Apply By 30 Aug 2023</p>
+                            <p><span class="iconn">📊</span> Number of openings: 5</p>
+
+                            <a href="/applicantDetails/<%=comp.id%>">
+                                <p><span class="iconn">👥</span> Applicants: <%=comp.applicants%>
+                                </p>
+                            </a>
+
+
+
+                        </div>
+
+
+
+
+                        <div class="skillss">
+                            <% comp.skills.forEach((skill)=>{ %>
+                                <span class="skilll">
+                                    <%=skill %>
+                                </span>
+                                <% })%>
+                        </div>
+
+
+                        <%}%>
+                            <%if(isLoggedIn){%>
+                                <button class="apply-buttonn" data-bs-toggle="modal">You
+                                    Can't Apply
+                                </button>
+                                <%}else{%>
+                                    <button class="apply-buttonn" data-bs-target="#exampleModal"
+                                        data-bs-toggle="modal">Apply
+                                        Now</button>
+                                    <%}%>
+                    </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Name</label>
+                        <input type="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+                            name="name">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            name="email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <label for="exampleInputEmail1" class="form-label">Resume</label>
+                        <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            name="resume">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="modal-body">
+                ...Make sure you enter details correctly
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+    </div>
+</div>

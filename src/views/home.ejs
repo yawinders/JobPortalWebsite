@@ -1,0 +1,112 @@
+<main>
+    <div class="outer-div">
+        <div class="content-div">
+
+            <h1> A comprehensive platform for reliable</h1>
+            <h2>job opportunities and internships</h2>
+            <div class="btns">
+                <a href="/jobs" class="custom-btn job-seeker">I am a Job Seeker</a>
+                <a href="/register" data-bs-target="#exampleModal" data-bs-toggle="modal" class="custom-btn recruiter">I
+                    am a Recruiter</a>
+            </div>
+        </div>
+        <div class="image-div">
+            <img src="/images/bgimg.jpeg" alt="developer-animated" class="animated-image">
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <center>
+                    <h3>Recruiters Registration</h3>
+                </center>
+                <% if (message) { %>
+                    <h4 style="color: green;">
+                        <%= message %>
+                    </h4>
+                    <% } %>
+                        <div class="modal-header">
+                            <form method="POST" action="/register">
+                                <div class="mb-3">
+                                    <label for="exampleInputName" class="form-label">Name</label>
+                                    <input type="name" class="form-control" id="exampleInputName"
+                                        aria-describedby="emailHelp" name="name">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" name="email">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                    <label for="exampleInputEmail1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" name="password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </form>
+                        </div>
+                        <div class="modal-body">
+                            ...Already Registered? then Login here
+                            <button type="button" data-bs-target="#exampleModal2" data-bs-toggle="modal"
+                                class="btn btn-secondary" data-bs-dismiss="modal">Login</button>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <center>
+                    <h3>Login</h3>
+                </center>
+                <% if (message) { %>
+                    <h4 style="color: green;">
+                        <%= message %>
+                    </h4>
+                    <% } %>
+                        <div class="modal-header">
+                            <form method="POST" action="/login">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" name="email">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                    <label for="exampleInputEmail1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" name="password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </form>
+                        </div>
+                        <div class="modal-body">
+                            ...Make sure you enter details correctly
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-bs-target="#exampleModal" data-bs-toggle="modal"
+                                class="btn btn-secondary" data-bs-dismiss="modal">Register</button>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to Trigger Login Modal on Successful Registration -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            <% if (typeof showLoginModal !== 'undefined' && showLoginModal) { %>
+                var loginModal = new bootstrap.Modal(document.getElementById('exampleModal2'));
+                loginModal.show();
+            <% } %>
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            <% if (typeof showRegisterModal !== 'undefined' && showRegisterModal) { %>
+                var registerModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                registerModal.show();
+            <% } %>
+        });
+    </script>
+</main>

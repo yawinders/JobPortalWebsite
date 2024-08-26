@@ -1,0 +1,48 @@
+<%if(message){ %>
+    <center>
+        <h3>
+            <%=message%>
+        </h3>
+    </center>
+
+    <%}%>
+        <% if(jobs.length>0){ %>
+
+            <div class="container">
+                <% jobs.forEach((job)=>{ %>
+                    <div class="job-conttianer">
+                        <h3>Actively hiring</h3>
+                        <p style="color: yellowgreen; font-size: 1.2rem;">
+                            <b>
+                                <%=job.company%>
+                            </b>
+                        </p>
+                        <p>
+                            Tech:<%=job.role%>
+                        </p>
+                        <br>
+                        <p>
+                            <%=job.location%>
+                        </p>
+                        <p>
+                            <%=job.salary%>
+                        </p>
+                        <% job.skills.forEach((skill)=>{ %>
+                            <span>
+                                <%=skill%>
+                            </span>
+                            <%})%>
+                                <div class="btn-div">
+
+                                    <a href="/jobs/<%=job.id%>">view details</a>
+                                </div>
+                    </div>
+                    <% })%>
+
+            </div>
+
+            <%} else {%>
+                <center>
+                    <h1>No job Post from Recuiters:')'</h1>
+                </center>
+                <%}%>

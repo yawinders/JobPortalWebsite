@@ -1,0 +1,152 @@
+.container {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(36, 36, 43);
+    color: white;
+}
+
+.container:hover {
+    cursor: default;
+
+}
+
+.job-conttianer {
+    border: 2px solid rgb(161, 161, 161);
+    padding: 20px;
+    max-width: 300px;
+}
+
+.job-conttianer:hover {
+    transform: scale(1.03);
+}
+
+.job-conttianer h3 {
+    color: lightblue;
+    background-color: rgb(97, 97, 241);
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.job-conttianer span {
+    border: 1px solid lightblue;
+    color: rgb(81, 81, 169);
+    padding: 2px;
+    margin: 1px;
+    overflow-wrap: break-word;
+    border-radius: 2px;
+}
+
+.job-conttianer span:hover {
+    background-color: green;
+    color: black;
+    cursor: default;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    margin: 10px 0;
+}
+
+.btn-div a {
+    padding: 10px;
+    text-decoration: none;
+    color: green;
+}
+
+.btn-div a:hover {
+    background-color: green;
+    color: white;
+}
+
+/* jobdetails */
+/* styles.css */
+.bodyy {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.job-containerr {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+.job-titlee {
+    color: #4BA6E3;
+    font-size: 24px;
+    text-align: center;
+}
+
+.job-detailss {
+    margin-top: 20px;
+}
+
+.job-detailss h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.job-detailss p {
+    margin: 5px 0;
+}
+
+.job-infoo {
+    margin: 15px 0;
+}
+
+.job-infoo p {
+    display: flex;
+    align-items: center;
+}
+
+.job-infoo .icon {
+    margin-right: 8px;
+}
+
+.skillss {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skilll {
+    background-color: #E0E0E0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #333;
+}
+
+.apply-buttonn {
+    background-color: #4BA6E3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.apply-buttonn:hover {
+    background-color: #388BB1;
+}

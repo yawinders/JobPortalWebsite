@@ -1,0 +1,38 @@
+<%if(comp){%>
+    <form method="post" action="" style="margin: 0 30px;">
+        <div class="mb-3">
+            <label for="company" class="form-label">Company Name</label>
+            <input type="text" class="form-control" id="company" name="company" placeholder="<%=comp.company%>">
+        </div>
+        <div class="mb-3">
+            <label for="role" class="form-label">Role</label>
+            <select class="form-control" id="role" name="role" placeholder="<%=comp.role%>">
+                <option value="SDE">SDE</option>
+                <option value="Angular Developer">Angular Developer</option>
+                <option value="React Developer">React Developer</option>
+                <option value="Web Developer">Web Developer</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" name="location" placeholder="<%=comp.location%>">
+        </div>
+        <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" class="form-control" id="salary" name="salary" placeholder="<%=comp.salary%>">
+        </div>
+        <% let skillsPlaceholder="" ; %>
+            <% comp.skills.forEach((skill, index)=> { %>
+                <% skillsPlaceholder +=skill; %>
+                    <% if (index < comp.skills.length - 1) { %>
+                        <% skillsPlaceholder +=", " ; %>
+                            <% } %>
+                                <% }); %>
+                                    <div class="mb-3">
+                                        <label for="skills" class="form-label">Skill Required</label>
+                                        <input type="text" class="form-control" id="skills" name="skills"
+                                            placeholder="<%= skillsPlaceholder %>">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Post New Job</button>
+    </form>
+    <%}%>

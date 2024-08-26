@@ -1,0 +1,28 @@
+<form method="post" action="/postNewJob" style="margin: 0 30px;">
+    <div class="mb-3">
+        <label for="company" class="form-label">Company Name</label>
+        <input type="text" class="form-control" id="company" name="company">
+    </div>
+    <div class="mb-3">
+        <label for="role" class="form-label">Role</label>
+        <select class="form-control" id="role" name="role">
+            <option value="SDE">SDE</option>
+            <option value="Angular Developer">Angular Developer</option>
+            <option value="React Developer">React Developer</option>
+            <option value="Web Developer">Web Developer</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" name="location">
+    </div>
+    <div class="mb-3">
+        <label for="salary" class="form-label">Salary</label>
+        <input type="text" class="form-control" id="salary" name="salary">
+    </div>
+    <div class="mb-3">
+        <label for="skills" class="form-label">Skill Required</label>
+        <input type="text" class="form-control" id="skills" name="skills" placeholder="put skills space separated">
+    </div>
+    <button type="submit" class="btn btn-primary">Post New Job</button>
+</form>

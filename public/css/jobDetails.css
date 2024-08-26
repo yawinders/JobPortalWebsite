@@ -1,0 +1,82 @@
+/* styles.css */
+.bodyy {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    margin: 0;
+}
+
+.job-containerr {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+.job-titlee {
+    color: #4BA6E3;
+    font-size: 24px;
+    text-align: center;
+}
+
+.job-detailss {
+    margin-top: 20px;
+}
+
+.job-detailss h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.job-detailss p {
+    margin: 5px 0;
+}
+
+.job-infoo {
+    margin: 15px 0;
+}
+
+.job-infoo p {
+    display: flex;
+    align-items: center;
+}
+
+.job-infoo .icon {
+    margin-right: 8px;
+}
+
+.skillss {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.skilll {
+    background-color: #E0E0E0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #333;
+}
+
+.apply-buttonn {
+    background-color: #4BA6E3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.apply-buttonn:hover {
+    background-color: #388BB1;
+}
